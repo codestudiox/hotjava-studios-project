@@ -1,5 +1,6 @@
+import { EXAMPLE_PATH } from '@/utils/blog-with-markdown/constants'
 import Container from './container'
-import { EXAMPLE_PATH } from '../lib/constants'
+ 
 
 const Footer = () => {
   return (
