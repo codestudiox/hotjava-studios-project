@@ -12,9 +12,9 @@ import PostHeader from '@/components/blog-with-markdown/post-header'
 import PostBody from '@/components/blog-with-markdown/post-body'
 
 export default function Post({ post, morePosts, preview }) {
-  console.log(post)
-  console.log(morePosts)
-  console.log(preview)
+  // console.log(post)
+  // console.log(morePosts)
+  // console.log(preview)
 
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {

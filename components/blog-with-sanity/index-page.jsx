@@ -10,7 +10,7 @@ export default function IndexPage(props) {
   const [heroPost, ...morePosts] = posts || []
   const { title = demo.title, description = demo.description } = settings || {}
 
-  console.log('IndexPage', { preview, loading, posts, settings })
+  // console.log('IndexPage', { preview, loading, posts, settings })
   return (
     <>
       <Head>

@@ -4,7 +4,7 @@ import { createGlobalStyle } from 'styled-components'
 // export const query = groq`count(*[])`
 
 export function DemoPost({ posts }) {
-  console.log(posts)
+  // console.log(posts)
   return (
     <>
       {posts.map((post) => (

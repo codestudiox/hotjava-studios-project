@@ -28,7 +28,7 @@ export const getStaticProps = async (ctx) => {
 export default function Page(props) {
   const { posts, settings, preview, token } = props
   // const { posts, preview, token } = props
-  console.log(posts)
+  // console.log(posts)
 
   if (preview) {
     return (

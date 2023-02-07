@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function CoverImage(props) {
-  console.log(props)
+  // console.log(props)
   const { title, slug, image: source, priority } = props
   const image = source?.asset?._ref ? (
     <div

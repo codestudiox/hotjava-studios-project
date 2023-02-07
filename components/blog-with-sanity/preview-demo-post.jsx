@@ -4,6 +4,6 @@ import { DemoPost } from './demo-post'
 
 export default function PreviewDemoPost({ query }) {
   const posts = usePreview(null, query)
-  console.log(posts)
+  // console.log(posts)
   return <DemoPost posts={posts} />
 }

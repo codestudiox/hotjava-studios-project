@@ -30,8 +30,8 @@ export const getStaticProps = async ({ preview = false }) => {
 }
 
 export default function BlogWithMarkdownPage({ preview, posts }) {
-  console.log(preview)
-  console.log(posts)
+  // console.log(preview)
+  // console.log(posts)
 
   if (preview) {
     return (

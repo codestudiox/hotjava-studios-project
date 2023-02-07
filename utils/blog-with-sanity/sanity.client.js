@@ -21,7 +21,7 @@ import {
 
 import { createClient } from 'next-sanity'
 
-const client = projectId
+export const client = projectId
   ? createClient({ projectId, dataset, apiVersion, useCdn })
   : null
 
