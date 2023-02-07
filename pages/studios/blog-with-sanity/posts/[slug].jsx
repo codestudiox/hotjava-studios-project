@@ -1,5 +1,5 @@
-import { PreviewSuspense } from 'next-sanity/preview'
-import PostPage from '@/components/blog-with-sanity/post-page'
+// import { PreviewSuspense } from 'next-sanity/preview'
+// import PostPage from '@/components/blog-with-sanity/post-page'
 // import PreviewPostPage from '@/components/blog-with-sanity/preview-post-page'
 import {
   getAllPostsSlugs,
@@ -55,7 +55,9 @@ export default function ProjectSlugRoute(props) {
 
   if (preview) {
     return (
-      <PreviewSuspense
+        <>
+        <h1> Preview View</h1>
+      {/* <PreviewSuspense
         fallback={
           <PostPage
             loading
@@ -72,7 +74,8 @@ export default function ProjectSlugRoute(props) {
           morePosts={morePosts}
           settings={settings}
         />
-      </PreviewSuspense>
+      </PreviewSuspense> */}
+      </>
     )
   }
 
@@ -81,7 +84,7 @@ export default function ProjectSlugRoute(props) {
   return (
     <>
       <h1> Static View</h1>
-      <PostPage post={post} morePosts={morePosts} settings={settings} />
+      {/* <PostPage post={post} morePosts={morePosts} settings={settings} /> */}
     </>
   )
 }
