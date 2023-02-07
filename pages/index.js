@@ -11,31 +11,51 @@ const HomePage = () => {
       </Head>
 
       <main className='flex w-full flex-1 flex-col items-center justify-center px-20 text-center'>
-        <h1 className='text-6xl font-bold'>
+        <h1 className='text-5xl font-bold'>
           Welcome to{' '}
           <a className='text-blue-600' href='https://nextjs.org'>
             Hotjava.com!
           </a>
         </h1>
 
-        <p className='mt-3 text-2xl'>
-          Get started by editing{' '}
-          <code className='rounded-md bg-gray-100 p-3 font-mono text-lg'>
-            pages/index.jsx
-          </code>
-        </p>
+        <h2 className='mt-10 text-3xl font-bold text-amber-500 underline'>
+          Clone Next.js Examples          
+        </h2>
 
-        <div className='mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full'>
-
-        <Link
+        <div className='mt-2 flex max-w-4xl flex-wrap items-center justify-around sm:w-full'>
+          <Link
             href='/studios/blog-with-markdown'
             className='mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600'
           >
-            <h3 className='text-2xl font-bold'>Blog Studio &rarr;</h3>
+            <h3 className='text-2xl font-bold'>Blog w. Markdown &rarr;</h3>
             <p className='mt-4 text-xl'>
-              clone Next.js Blog with markdown files
+              Clone Next.js Blog with markdown files
             </p>
-          </Link>
+          </Link>  
+          <Link
+            href='/studios/blog-with-sanity'
+            className='mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600'
+          >
+            <h3 className='text-2xl font-bold'>Blog w. Database &rarr;</h3>
+            <p className='mt-4 text-xl'>
+              Clone Next.js Blog with database
+            </p>
+          </Link>    
+          <Link
+            href='/studios/blog-with-sanity'
+            className='mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600'
+          >
+            <h3 className='text-2xl font-bold'>Blog w. Sanity &rarr;</h3>
+            <p className='mt-4 text-xl'>
+              Clone Next.js Blog with sanity
+            </p>
+          </Link>        
+        </div>
+        <h2 className='mt-10 text-3xl font-bold text-purple-500 underline'>
+          Next.js Official Docs
+        </h2>
+        <hr />
+        <div className='mt-2 flex max-w-4xl flex-wrap items-center justify-around sm:w-full'>
           <a
             href='https://nextjs.org/docs'
             className='mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600'

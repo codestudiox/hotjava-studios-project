@@ -11,8 +11,8 @@ const PostPreview = ({ title, coverImage, date, excerpt, author, slug }) => {
       </div>
       <h3 className='text-3xl mb-3 leading-snug'>
         <Link
-          as={`/posts/${slug}`}
-          href='/posts/[slug]'
+          as={`/studios/blog-with-markdown/posts/${slug}`}
+          href='/studios/blog-with-markdown/posts/[slug]'
           className='hover:underline'
         >
           {title}

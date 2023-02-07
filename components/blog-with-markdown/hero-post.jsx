@@ -13,8 +13,8 @@ const HeroPost = ({ title, coverImage, date, excerpt, author, slug }) => {
         <div>
           <h3 className='mb-4 text-4xl lg:text-5xl leading-tight'>
             <Link
-              as={`/posts/${slug}`}
-              href='/posts/[slug]'
+              as={`/studios/blog-with-markdown/posts/${slug}`}
+              href='/studios/blog-with-markdown/posts/[slug]'
               className='hover:underline'
             >
               {title}
