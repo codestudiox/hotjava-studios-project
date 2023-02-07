@@ -1,45 +1,47 @@
-import { DemoPost } from '@/components/blog-with-sanity/demo-post'
-import PreviewDemoPost from '@/components/blog-with-sanity/preview-demo-post'
-import { client } from '@/utils/blog-with-sanity/sanity.client'
-import { groq } from 'next-sanity'
-import { PreviewSuspense } from 'next-sanity/preview'
 
-// step1: test query with getStaticProps
-const query = groq`
-*[_type == "post"]{
-  ...,
-  author->,
-  category[]->,
-  } | order(_createdAt desc)
-`
+import IndexPage from '@/components/blog-with-sanity/index-page'
+import { getAllPosts, getSettings } from '@/utils/blog-with-sanity/sanity.client'
+import React from 'react'
 
-// step2: test query with getStaticProps
-export const getStaticProps = async ({ preview = false }) => {
+export const getStaticProps = async (ctx) => {
+  const { preview = false, previewData = {} } = ctx
+
+  const [settings, posts] = await Promise.all([getSettings(), getAllPosts()])
+
+  // const settings = await getSetting()
+
+
   if (preview) {
     return { props: { preview } }
   }
 
-  const posts = await client.fetch(query)
-
   return {
     props: {
-      preview,
       posts,
+      settings,
+      preview,
+      token: previewData?.token ?? null,
     },
   }
 }
 
-export default function BlogWithMarkdownPage({ preview, posts }) {
-  console.log(preview)
+export default function Page(props) {
+  const { posts, settings, preview, token } = props
+  // const { posts, preview, token } = props
   console.log(posts)
 
   if (preview) {
     return (
-      <PreviewSuspense fallback={<div>Loading...</div>}>
-        <PreviewDemoPost query={query} />
-      </PreviewSuspense>
+      <div>
+        <h1>Preview Mode</h1>
+      </div>
     )
   }
 
-  return <DemoPost posts={posts} />
+  return (
+    <div>
+      <IndexPage posts={posts} settings={settings} />
+      {/* <IndexPage posts={posts}  /> */}
+    </div>
+  )
 }
